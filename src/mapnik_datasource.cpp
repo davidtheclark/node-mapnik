@@ -275,7 +275,7 @@ NAN_METHOD(Datasource::featureset)
         /* LCOV_EXCL_STOP */
     }
 
-    if (fs)
+    if (fs && mapnik::is_valid(fs))
     {
         info.GetReturnValue().Set(Featureset::NewInstance(fs));
     }
