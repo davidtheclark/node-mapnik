@@ -1,4 +1,6 @@
-# Changelog
+## Head
+
+- Added `typeName` to `mapnik.Geometry`. This returns the GeoJSON type name of a geometry.
 
 ## 3.5.13
 
@@ -104,7 +106,7 @@ Summary of changes:
  - Added optional arguments of `tile_size` and `buffer_size` to `mapnik.VectorTile` constructor.
 
 ## 3.4.19
-  
+
  - Update to mapnik-core 3.0.11 with a fix to unquoted strings
 
 ## 3.4.18
@@ -247,8 +249,8 @@ Notable changes in the Mapnik SDK include:
    this is set to `mapnik.polygonFillType.nonZero`
  - Added `multi_polygon_union`  option to `VectorTile.composite`, `VectorTile.addGeoJSON`, and `Map.render`. By
    default this is set to `true`. This will cause multipolygons to undergo a union operation during vector tile
-   creation. 
- - Added `simplify_distance`  option to `VectorTile.composite`. 
+   creation.
+ - Added `simplify_distance`  option to `VectorTile.composite`.
  - Added `max_extent` (bbox) option to `VectorTile.composite`. By default it is unset which means no
    clipping extent will be used for the operation. If provided the data will be restricted to this extent.
      - Landed in https://github.com/mapnik/node-mapnik/commit/ef3b12a36f529a1a8fbb70f4ddd6a92e1bd22008
@@ -313,7 +315,7 @@ Notable Changes in Mapnik 3.0.5 include:
 
  - Rebuilt with Mapnik 3.0.5
  - Added ability to create an image using a Buffer object. It should be noted that this should
-   be used very carefully as the lifetime of the Image object is tied to that of the Buffer. If the 
+   be used very carefully as the lifetime of the Image object is tied to that of the Buffer. If the
    buffer object is garbage collect this could result in a segfault.
 
 Notable Changes in Mapnik 3.0.5 include:
@@ -377,7 +379,7 @@ Notable changes in the Mapnik SDK include:
  - Binaries updated to use Mapnik v3.0.2 and mapnik-packaging@049968d24
 
 Notable changes in the Mapnik SDK include:
- 
+
  - Added container to log SVG parsing errors
  - Reimplemented to use rapidxml for parsing XML (DOM)
  - Support both xml:id and id attributes ( xml:id takes precedence )
@@ -518,7 +520,7 @@ Notable changes in the Mapnik SDK include:
  - Added stress test benchmarks that live in ./bench folder of git repo
  - Added `isSolid` method to `Image` object
  - When making vector tiles that are larger then 64 MB changed node so that it would no longer through an abort but rather an exception
- - Added extra meta data for some datasource associated with the use of the `describe` method on datasources 
+ - Added extra meta data for some datasource associated with the use of the `describe` method on datasources
 
 Notable changes in the Mapnik SDK include:
  - Changes: https://github.com/mapnik/mapnik/compare/8063fa0...30c6cf636c
@@ -582,7 +584,7 @@ Notable changes in the Mapnik SDK include:
  - Binaries updated to use Mapnik v3.x (master branch) at 2577a6c and mapnik-packaging@759c4a32ba
 
 ## 3.1.0
- 
+
  - Added [`mapnik.Logger`](https://github.com/mapnik/node-mapnik/blob/master/docs/Logger.md)
  - Added `Map.loadFonts`, `Map.fonts()`, `Map.fontFiles()`, `Map.fontDirectory()`, and `Map.memoryFonts()`
  - Added `Feature.fromJSON` and `Feature.geometry`
